@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link href="https://fonts.googleapis.com/css?family=League+Spartan" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="media.css">
+
+    
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo-name" style="display: flex; width: fit-content;">
+                <div class="limg"><img class="limg1" src="funzone.png" alt="Fun Zone Logo"></div>
+                <a href="#LandingPage.html" class="logo1">
+                    <div class="logo">Fun Zone</div>
+                </a>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Slider -->
+    <section class="hero">
+        <div class="slider">
+            <!-- Slide 1 -->
+            <div class="slide fade">
+                <img src="bg2.jpg" alt="Slide 1">
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide fade">
+                <img src="bg1.jpg" alt="Slide 2">
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide fade">
+                <img src="bg3.png" alt="Slide 3">
+            </div>
+        </div>
+
+        <div class="hero-text">
+            <h1 id="typing-text" class="typing-text"></h1>
+            <p style="color:rgb(0, 255, 166);">Your solution to everything awesome.</p>
+            <a href="#contact" class="cta-btn">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="feature">
+            <img src="feature1.png" alt="Games Icon">
+            <h2>Interactive Games</h2>
+            <p>Play exciting games that will keep you entertained for hours. From brain teasers to action-packed adventures, there's something for everyone!</p>
+        </div>
+        <div class="feature">
+            <img src="feature2.png" alt="VR Icon" height="200px" style="margin-top: -20px;">
+            <h2 >Virtual Reality Experiences</h2>
+            <p>Step into a new dimension of fun with our cutting-edge VR games and experiences. Feel the thrill of adventure without ever leaving your room!</p>
+        </div>
+        <div class="feature">
+            <img src="feature3.png" alt="Competition Icon" height="130px" width="200px">
+            <h2>Live Competitions</h2>
+            <p>Join our community and compete in live events! Whether it's gaming tournaments or talent shows, there's always a chance to win and have fun.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div><hr><h2>About FunZone</h2>
+        <p>FunZone is your ultimate destination for non-stop entertainment, where fun meets innovation. We bring you a world of interactive games, thrilling virtual reality experiences, and exciting live competitions. Our mission is to create an engaging and vibrant community where you can play, compete, and explore endless possibilities!</p>
+        <br><hr class="hr2"><hr class="hr1"><hr class="hr2"><p>Whether you're a casual gamer, an adventurer, or someone looking to test your skills in live competitions, FunZone has something for everyone. Dive in and discover a universe where entertainment is redefined!</p>
+    <br><hr></div></section>
+    
+
+<!-- Contact Form Section -->
+<section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <form id="contact-form" action="#" method="post">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+
+
+
+<!-- Custom Alert Box -->
+<div id="custom-alert" class="custom-alert" style="display: none;">
+    <p id="alert-message"></p>
+    <button onclick="closeAlert()">OK</button>
+</div>
+
+    
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 My Landing Page. All rights reserved.</p>
+        <ul class="social-links">
+            <div class="div1"><a href="#"><img class="img1" src="facebook.png" alt="facebook" ></a><a href="#"><li>Facebook</li></a></div>
+            <div class="div1"><a href="#"><img class="img2" src="twitter.png" alt="twitter" ></a><a href="#"><li>Twitter</li></a></div>
+            <div class="div1"><a href="#"><img class="img3" src="linkedin.png" alt="linkedin" ></a><a href="#"><li>LinkedIn</li></a></div>
+        </ul>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        function myFunction() {
+          var x = document.getElementById("nav-links");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+            x = window.matchMedia("screen and ( max-width: 498px ) and ( max-height: 916px ) and  ( min-width: 200px )");
+          } else {
+            x.style.display = "block";
+            x = window.matchMedia(" screen and (max-width: 2000px) and ( min-width: 500px )");
+          }
+        }
+        </script>
+
+    
+</body>
+</html>
