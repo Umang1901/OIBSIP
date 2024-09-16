@@ -304,4 +304,14 @@ nav {max-width: 100%; z-index: 1;}
     border: 2px solid #00f7ff;
 }
 
+footer{
+    display: block; 
+    justify-content: space-between;
+}
+.social-media{
+    display: flex; 
+    justify-content: space-evenly;
+    width: 90%;
+    margin-left: 1%;
+}
     }
