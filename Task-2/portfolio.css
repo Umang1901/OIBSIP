@@ -479,3 +479,31 @@ footer p {
     
     border: 2px solid #00f7ff;
 }
+
+footer{
+    display: flex; 
+    justify-content: space-around;
+}
+.social-media{
+    display: flex; 
+    justify-content: space-evenly;
+    width: 20%;
+    margin-left: 40%;
+}
+
+.social-media a{
+    width: 5px;
+    height: 38px;
+    font-size: 2rem;
+    text-decoration: none;
+    transform: rotate(6.284rad);
+    background-color: black;
+    border-radius: 50px;
+    color: #00f7ff;
+    position: relative;
+    transition: transform 1s ease;
+}
+
+.social-media a:hover{
+    color: #87f520;
+}
