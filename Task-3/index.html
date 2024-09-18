@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="media_temp.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Temperature Converter</h1>
+    <div class="converter">
+        <input type="number" id="temperature" placeholder="Enter temperature" />
+        
+        <select id="inputUnit">
+            <option value="C">Celsius</option>
+            <option value="F">Fahrenheit</option>
+            <option value="K">Kelvin</option>
+        </select>
+        
+        <button onclick="convertTemperature()">Convert</button>
+        
+        <div class="result" id="result"></div>
+    </div>
+</div>
+
+    <script>
+        function convertTemperature() {
+            const tempInput = document.getElementById('temperature').value;
+            const inputUnit = document.getElementById('inputUnit').value;
+            const resultDisplay = document.getElementById('result');
+            
+            let temperature = parseFloat(tempInput);
+            if (isNaN(temperature)) {
+                resultDisplay.textContent = 'Please enter a valid number.';
+                return;
+            }
+            
+            let convertedTemp;
+            let outputUnit;
+            
+            // Convert from Celsius
+            if (inputUnit === 'C') {
+                convertedTemp = {
+                    F: (temperature * 9/5) + 32,
+                    K: temperature + 273.15
+                };
+                outputUnit = `Fahrenheit: ${convertedTemp.F.toFixed(2)} °F, Kelvin: ${convertedTemp.K.toFixed(2)} K`;
+            }
+            
+            // Convert from Fahrenheit
+            else if (inputUnit === 'F') {
+                convertedTemp = {
+                    C: (temperature - 32) * 5/9,
+                    K: ((temperature - 32) * 5/9) + 273.15
+                };
+                outputUnit = `Celsius: ${convertedTemp.C.toFixed(2)} °C, Kelvin: ${convertedTemp.K.toFixed(2)} K`;
+            }
+            
+            // Convert from Kelvin
+            else if (inputUnit === 'K') {
+                convertedTemp = {
+                    C: temperature - 273.15,
+                    F: ((temperature - 273.15) * 9/5) + 32
+                };
+                outputUnit = `Celsius: ${convertedTemp.C.toFixed(2)} °C, Fahrenheit: ${convertedTemp.F.toFixed(2)} °F`;
+            }
+            
+            resultDisplay.textContent = outputUnit;
+        }
+    </script>
+
+</body>
+</html>

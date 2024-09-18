@@ -1,0 +1,90 @@
+html{
+    background: linear-gradient(to bottom right, #0d4458, #9c9cee, rgb(133, 208, 231),#2a1212);
+    background-size:contain;
+}
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+}
+
+.container{
+    
+    /* width: 120%; */
+    background: linear-gradient(to bottom right, #068c81, #eeff00, rgb(0, 195, 255),#fd800b);
+    padding: 0.5%;
+    padding-bottom: 100px;
+    padding-top: 50px;
+    border-radius: 30px;
+}
+
+.converter {
+    width: 70%;
+    display: inline-block;
+    margin-top: 50px;
+    /* background-color:rgb(38, 13, 113); */
+    background: linear-gradient(to bottom right, #0a0a23, #1a1a54, rgb(6, 78, 100),#000000);
+    padding: 5%;
+    border-radius: 10px;
+}
+
+input {
+    width: 97%;
+    padding: 1%;
+    margin: 1%;
+    font-size: 16px;
+    border: 5px solid #7b00ff;
+    border-radius: 10px;
+    color: red;
+    background-color: #3525c6;
+}
+select {
+    width: 100%;
+    padding: 1%;
+    margin: 1%;
+    font-size: 16px;
+    border: 5px solid #7b00ff;
+    border-radius: 10px;
+    color: red;
+    background-color: #3525c6;
+}
+
+
+::placeholder {
+    color: red;
+    opacity: 1; /* Firefox */
+  }
+  
+  ::-ms-input-placeholder { /* Edge 12-18 */
+    color: red;
+  }
+  
+button{
+    background-image:radial-gradient(farthest-corner at 15px 10px, #ffe9e9 10%,#00eeff 15%,#ff09da 100%);
+    padding: 1%;
+    margin: 1%;
+    font-size: 20px;
+    font-weight: 700;
+    border: 5px solid #7b00ff;
+    border-radius: 10px;
+    color: blue;
+}
+
+button:hover{
+    transform: scale(0.9);
+    box-shadow: 2px 4px 7px #04f7ff  ;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #ffd900;
+    text-shadow: 2px 2px 3px red;
+    font-weight: 700;
+    border: 5px solid transparent;
+    padding: 10px 5px 10px 5px;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 10);
+    background: linear-gradient(to bottom right, #0000ff, #04f7ff,#0000ff);
+    border-radius: 10px;
+}
