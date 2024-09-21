@@ -211,11 +211,11 @@
         <section class="contactSection" id="contact">
             <h2>Contact Me</h2>
             <p class="p1">Feel free to reach out to discuss a project or just to say hi!</p>
-            <form action="#">
+            <form action="https://umangportfolio442.netlify.app/" onclick="message()">
                 <input type="text" placeholder="Your Name">
                 <input type="email" placeholder="Your Email">
                 <textarea placeholder="Your Message"></textarea>
-                <button type="submit">Send Message</button>
+                <button type="submit" id="mess-button">Send Message</button>
             </form>
             <a href="#about"><div class="top">⇪</div></a>
         </section>
@@ -227,6 +227,8 @@
             <a href="https://www.linkedin.com/in/umang-tiwari-a67b6023a/" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://www.instagram.com/umang_tiw_ari/" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://wa.me/9315471056" target="_blank" ><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:tumang487@gmail.com"><i class="far fa-envelope"></i></a>
+            
         </div>
     </footer>
     
@@ -240,6 +242,11 @@
             x.style.display = "block";
             x = window.matchMedia(" screen and (max-width: 2000px) and ( min-width: 500px )");
           }
+        }
+
+        function message(){
+            var x=document.getElementById("mess-button");
+            x.addEventListener("click", function(){ alert("Message Successfully Sent!!"); });
         }
         </script>
 </body>
